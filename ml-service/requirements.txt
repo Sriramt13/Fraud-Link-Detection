@@ -4,5 +4,6 @@ requests
 numpy
 pandas
 scikit-learn
+tldextract
 gunicorn
 python-whois
