@@ -7,3 +7,4 @@ scikit-learn
 tldextract
 gunicorn
 python-whois
+python-dotenv
