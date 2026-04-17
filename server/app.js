@@ -10,8 +10,14 @@ import { markUserActive } from "./services/realtimeMetrics.js";
 export const createApp = (env) => {
   const app = express();
 
-  app.use(cors());
+  app.use(cors({
+    origin: "*"
+  }));
   app.use(express.json());
+
+  app.get("/", (req, res) => {
+    res.send("Backend running 🚀");
+  });
 
   const loginLimiter = rateLimit({
     windowMs: 15 * 60 * 1000,
